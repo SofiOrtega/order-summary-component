@@ -1,0 +1,173 @@
+:root{
+--pale-blue: hsl(225, 100%, 94%);
+--bright-blue: hsl(245, 75%, 52%);
+--very-pale-blue: hsl(225, 100%, 98%);
+--desaturated-blue: hsl(224, 23%, 55%);
+--dark-blue: hsl(223, 47%, 23%);
+}
+
+html{
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 12px;
+}
+
+*, *:before, *:after{
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue);
+}
+
+.contain-card{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.bkg-wave-mobile{
+    display: none;
+}
+
+.bkg-wave{
+    position: absolute;
+    width: 100%;
+    min-width: 1200px;
+    z-index: -1;
+}
+
+.card{
+    width: 400px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 20px hsl(245deg 75% 52% / 13%);
+}
+
+.card-body{
+    text-align: center;
+    padding: 40px 0 0;
+}
+
+.card-body h1{
+    font-size: 2.2rem;    
+    font-weight: 700;
+}
+
+.card-body p{
+    font-size: 1.2rem;
+    margin: 12px 35px;
+    line-height: 1.5;
+}
+
+.card-body p, .price span{
+    color: var(--desaturated-blue);
+}
+
+.card-body h1, .price h2{
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.card-suscribe-text{
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: flex;
+    width: 80%;
+    height: auto;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--very-pale-blue);
+    border-radius: 18px;
+}
+
+
+.card-suscribe-text a{
+    font-size: 1.1rem;
+    color: var(--bright-blue);
+    font-weight: 900;
+}
+
+.price{
+    display: flex;
+}
+
+.price h2{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+.price span{
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-top: 5px;
+    display: block;
+}
+
+
+.card-action{
+    display: block;
+    margin: auto;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.btnpay{    
+    width: 80%;
+    height: 50px;
+    background-color: var(--bright-blue);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 0 15px 20px hsl(245deg 75% 52% / 13%);
+}
+
+.btnpay:hover{
+    background-color: #786ee3;
+}
+
+.linkcancel{
+    color: var(--desaturated-blue);
+    padding-bottom: 20px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.linkcancel:hover{
+    color: var(--dark-blue);
+}
+
+@media (max-width: 420px){
+       .bkg-wave{
+        display: none;
+       }
+
+       .bkg-wave-mobile{
+        display: block;
+        position: absolute;
+        width: 100%;
+        min-width: 1200px;
+        z-index: -1;
+       }
+       .card{
+        width: 310px;
+        height: 550px;
+       }
+       .price h2{
+        margin-left: 15px;
+    }
+    .card-suscribe-text{
+        width: 90%;
+    }
+}
