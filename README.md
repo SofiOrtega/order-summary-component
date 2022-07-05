@@ -10,4 +10,4 @@ Your users should be able to:
 
 * See hover states for interactive elements
 
-see here: https://sofiaortega-ordersummarycomponent.netlify.app/
+Deploy: https://sofiaortega-ordersummarycomponent.netlify.app/
